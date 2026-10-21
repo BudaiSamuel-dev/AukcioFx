@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AukcioController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="72.0" prefWidth="600.0">
+         <children>
+            <Label text="Aukciós tételek">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="TOP_CENTER" hgap="10.0" prefHeight="64.0" prefWidth="600.0">
+         <children>
+            <CheckBox fx:id="chbMinden" mnemonicParsing="false" onAction="#selectMinden" text="Minden" />
+            <CheckBox fx:id="chbBelyeg" mnemonicParsing="false" onAction="#selectBelyeg" text="Bélyegek" />
+            <CheckBox fx:id="chbErme" mnemonicParsing="false" onAction="#selectErme" text="Érmék" />
+            <CheckBox fx:id="chbFestmeny" mnemonicParsing="false" onAction="#selectFestmenyek" text="Festmények" />
+         </children>
+      </FlowPane>
+      <ListView fx:id="lvTetelek" prefHeight="233.0" prefWidth="580.0" VBox.vgrow="ALWAYS" />
+      <FlowPane alignment="CENTER" hgap="10.0" prefHeight="54.0" prefWidth="580.0">
+         <children>
+            <Label fx:id="lbTetel" textFill="BLUE" />
+            <Label fx:id="lbKikialtasiAr" textFill="#b50000" />
+         </children>
+      </FlowPane>
+      <TextArea fx:id="taReszletek" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
